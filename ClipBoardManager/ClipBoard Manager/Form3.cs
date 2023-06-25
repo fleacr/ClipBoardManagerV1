@@ -46,7 +46,7 @@ namespace ClipBoard_Manager
 
             reader.Close();
             Conectarbd.Close();
-            //This a test to github
+            //Second test with GitHub
         }
     }
 }
