@@ -1,0 +1,13 @@
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\bin\Debug\ClipBoard Manager.exe.config
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\bin\Debug\ClipBoard Manager.exe
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\bin\Debug\ClipBoard Manager.pdb
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.AssemblyReference.cache
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.SuggestedBindingRedirects.cache
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form1.resources
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form2.resources
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Properties.Resources.resources
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.GenerateResource.cache
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.CoreCompileInputs.cache
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.exe
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.pdb
+F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form3.resources
