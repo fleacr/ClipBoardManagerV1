@@ -48,5 +48,30 @@ namespace ClipBoard_Manager
             Conectarbd.Close();
             //Second test with GitHub
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox1.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox2.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox3.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox4.Text);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox5.Text);
+        }
     }
 }

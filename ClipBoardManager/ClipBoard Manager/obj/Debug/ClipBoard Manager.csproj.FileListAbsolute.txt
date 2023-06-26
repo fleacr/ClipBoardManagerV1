@@ -11,3 +11,16 @@ F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Mana
 F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.exe
 F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard Manager.pdb
 F:\Ideas\ClipBoard Manager\ClipBoard Manager V1\ClipBoard Manager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form3.resources
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\bin\Debug\ClipBoard Manager.exe.config
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\bin\Debug\ClipBoard Manager.exe
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\bin\Debug\ClipBoard Manager.pdb
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.AssemblyReference.cache
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.SuggestedBindingRedirects.cache
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form1.resources
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form2.resources
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Form3.resources
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard_Manager.Properties.Resources.resources
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.GenerateResource.cache
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.CoreCompileInputs.cache
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.exe
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.pdb
