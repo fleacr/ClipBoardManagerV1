@@ -14,7 +14,7 @@ namespace ClipBoard_Manager
 {
     public partial class Form3 : Form
     {
-        Class1 manager = new Class1();
+        Methods manager = new Methods();
         public SqlConnection Conectarbd = new SqlConnection();
         public Form3()
         {
@@ -72,6 +72,53 @@ namespace ClipBoard_Manager
         private void button5_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(textBox5.Text);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cadena = "Data Source=DESKTOP-JKTQPIP\\SQLEXPRESS;Initial Catalog=ClipBoardManager; Integrated Security=True";
+            Conectarbd = new SqlConnection(cadena);
+
+            string projectName = comboBox1.Text;
+            string strQuery = "SELECT templateOne, templateTwo, templateThree, templateFour, templateFive FROM ProjectsClipBoardManager WHERE projectName = '" + projectName + "'";
+            
+
+            Conectarbd.Open();
+            
+            SqlCommand cmd = new SqlCommand(strQuery, Conectarbd);            
+            SqlDataReader reader = cmd.ExecuteReader();              
+            
+
+            while (reader.Read())
+            {
+                if (reader["templateOne"].ToString() != string.Empty)
+                {
+                    textBox1.Text = reader.GetString(0);
+                }
+
+                if (reader["templateTwo"].ToString() != string.Empty) 
+                {
+                    textBox2.Text = reader.GetString(1);
+                }
+
+                if (reader["templateThree"].ToString() != string.Empty) 
+                {
+                    textBox3.Text = reader.GetString(2);
+                }
+
+                if (reader["templateFour"].ToString() != string.Empty) 
+                {
+                    textBox4.Text = reader.GetString(3);
+                }
+
+                if (reader["templateFive"].ToString() != string.Empty)
+                {
+                    textBox5.Text = reader.GetString(4);
+                }
+            }
+
+            reader.Close();
+            Conectarbd.Close();
         }
     }
 }

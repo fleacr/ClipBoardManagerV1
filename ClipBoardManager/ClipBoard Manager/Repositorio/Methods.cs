@@ -8,16 +8,17 @@ using System.Threading.Tasks;
 using System.Security.Policy;
 using System.Windows.Forms;
 using System.Data.OleDb;
-
+using ClipBoard_Manager.Models;
 
 namespace ClipBoard_Manager
 {
-    internal class Class1
+    internal class Methods
     {
         //Cadena  de Conexion
         string cadena = "Data Source=DESKTOP-JKTQPIP\\SQLEXPRESS;Initial Catalog=ClipBoardManager; Integrated Security=True";
         public SqlConnection Conectarbd = new SqlConnection();
-        public Class1()
+
+        public Methods()
         {
             Conectarbd.ConnectionString = cadena;
         } 
@@ -44,20 +45,19 @@ namespace ClipBoard_Manager
 
 
         //INSERT METHODS
-        public void InsertOne(string projectName, string templateOne)
+        public void InsertOne(ProjectsClipBoardManager projectsClipBoardManager)
         {
 
 
             Conectarbd.Open();
 
-            //string query = "INSERT INTO ProjectsClipBoardManager (projectName, templateOne) values (@projectName, @templateOne)";
             string query = "INSERT INTO ProjectsClipBoardManager (projectName, templateOne) SELECT @projectName, @templateOne WHERE NOT EXISTS (SELECT 1 FROM ProjectsClipBoardManager WHERE projectName = @projectName)";
             SqlCommand cmd = new SqlCommand(query, Conectarbd);
             cmd.Parameters.Add("@projectName", SqlDbType.VarChar);
             cmd.Parameters.Add("@templateOne", SqlDbType.Text);
 
-            cmd.Parameters["@projectName"].Value = projectName;
-            cmd.Parameters["@templateOne"].Value = templateOne;
+            cmd.Parameters["@projectName"].Value = projectsClipBoardManager.projectName;
+            cmd.Parameters["@templateOne"].Value = projectsClipBoardManager.templateOne;
 
             int rowsAffected = cmd.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
@@ -74,7 +74,7 @@ namespace ClipBoard_Manager
             }
         }
 
-        public void InsertTwo(string projectName, string templateOne, string templateTwo)
+        public void InsertTwo(ProjectsClipBoardManager projectsClipBoardManager)
         {
             Conectarbd.Open();
             string query = "INSERT INTO ProjectsClipBoardManager (projectName, templateOne, templateTwo) SELECT @projectName, @templateOne, @templateTwo WHERE NOT EXISTS (SELECT 1 FROM ProjectsClipBoardManager WHERE projectName = @projectName)";
@@ -83,9 +83,9 @@ namespace ClipBoard_Manager
             cmd.Parameters.Add("@templateOne", SqlDbType.Text);
             cmd.Parameters.Add("@templateTwo", SqlDbType.Text);
 
-            cmd.Parameters["@projectName"].Value = projectName;
-            cmd.Parameters["@templateOne"].Value = templateOne;
-            cmd.Parameters["@templateTwo"].Value = templateTwo;
+            cmd.Parameters["@projectName"].Value = projectsClipBoardManager.projectName;
+            cmd.Parameters["@templateOne"].Value = projectsClipBoardManager.templateOne;
+            cmd.Parameters["@templateTwo"].Value = projectsClipBoardManager.templateTwo; 
 
             int rowsAffected = cmd.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
@@ -102,7 +102,7 @@ namespace ClipBoard_Manager
             }
         }
 
-        public void InsertThree(string projectName, string templateOne, string templateTwo, string templateThree)
+        public void InsertThree(ProjectsClipBoardManager projectsClipBoardManager)
         {
             Conectarbd.Open();
             string query = "INSERT INTO ProjectsClipBoardManager (projectName, templateOne, templateTwo, templateThree) SELECT @projectName, @templateOne, @templateTwo, @templateThree WHERE NOT EXISTS (SELECT 1 FROM ProjectsClipBoardManager WHERE projectName = @projectName)";
@@ -112,10 +112,10 @@ namespace ClipBoard_Manager
             cmd.Parameters.Add("@templateTwo", SqlDbType.Text);
             cmd.Parameters.Add("@templateThree", SqlDbType.Text);
 
-            cmd.Parameters["@projectName"].Value = projectName;
-            cmd.Parameters["@templateOne"].Value = templateOne;
-            cmd.Parameters["@templateTwo"].Value = templateTwo;
-            cmd.Parameters["@templateThree"].Value = templateThree;
+            cmd.Parameters["@projectName"].Value = projectsClipBoardManager.projectName;
+            cmd.Parameters["@templateOne"].Value = projectsClipBoardManager.templateOne;
+            cmd.Parameters["@templateTwo"].Value = projectsClipBoardManager.templateTwo;
+            cmd.Parameters["@templateThree"].Value = projectsClipBoardManager.templateThree;
 
             int rowsAffected = cmd.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
@@ -132,7 +132,7 @@ namespace ClipBoard_Manager
             }
         }
 
-        public void InsertFour(string projectName, string templateOne, string templateTwo, string templateThree, string templateFour)
+        public void InsertFour(ProjectsClipBoardManager projectsClipBoardManager)
         {
             Conectarbd.Open();
             string query = "INSERT INTO ProjectsClipBoardManager (projectName, templateOne, templateTwo, templateThree, templateFour) SELECT @projectName, @templateOne, @templateTwo, @templateThree, @templateFour WHERE NOT EXISTS (SELECT 1 FROM ProjectsClipBoardManager WHERE projectName = @projectName)";
@@ -143,11 +143,11 @@ namespace ClipBoard_Manager
             cmd.Parameters.Add("@templateThree", SqlDbType.Text);
             cmd.Parameters.Add("@templateFour", SqlDbType.Text);
 
-            cmd.Parameters["@projectName"].Value = projectName;
-            cmd.Parameters["@templateOne"].Value = templateOne;
-            cmd.Parameters["@templateTwo"].Value = templateTwo;
-            cmd.Parameters["@templateThree"].Value = templateThree;
-            cmd.Parameters["@templateFour"].Value = templateFour;
+            cmd.Parameters["@projectName"].Value = projectsClipBoardManager.projectName; ;
+            cmd.Parameters["@templateOne"].Value = projectsClipBoardManager.templateOne; ;
+            cmd.Parameters["@templateTwo"].Value = projectsClipBoardManager.templateTwo; ;
+            cmd.Parameters["@templateThree"].Value = projectsClipBoardManager.templateThree;
+            cmd.Parameters["@templateFour"].Value = projectsClipBoardManager.templateFour;
 
             int rowsAffected = cmd.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
@@ -166,7 +166,7 @@ namespace ClipBoard_Manager
 
 
 
-        public void InsertFive(string projectName, string templateOne, string templateTwo, string templateThree, string templateFour, string templateFive)
+        public void InsertFive(ProjectsClipBoardManager projectsClipBoardManager)
         {
             Conectarbd.Open();
             string query = "INSERT INTO ProjectsClipBoardManager (projectName, templateOne, templateTwo, templateThree, templateFour, templateFive) SELECT @projectName, @templateOne, @templateTwo, @templateThree, @templateFour, @templateFive WHERE NOT EXISTS (SELECT 1 FROM ProjectsClipBoardManager WHERE projectName = @projectName)";
@@ -178,12 +178,12 @@ namespace ClipBoard_Manager
             cmd.Parameters.Add("@templateFour", SqlDbType.Text);
             cmd.Parameters.Add("@templateFive", SqlDbType.Text);
 
-            cmd.Parameters["@projectName"].Value = projectName;
-            cmd.Parameters["@templateOne"].Value = templateOne;
-            cmd.Parameters["@templateTwo"].Value = templateTwo;
-            cmd.Parameters["@templateThree"].Value = templateThree;
-            cmd.Parameters["@templateFour"].Value = templateFour;
-            cmd.Parameters["@templateFive"].Value = templateFive;
+            cmd.Parameters["@projectName"].Value = projectsClipBoardManager.projectName;
+            cmd.Parameters["@templateOne"].Value = projectsClipBoardManager.templateOne;
+            cmd.Parameters["@templateTwo"].Value = projectsClipBoardManager.templateTwo;
+            cmd.Parameters["@templateThree"].Value = projectsClipBoardManager.templateThree;
+            cmd.Parameters["@templateFour"].Value = projectsClipBoardManager.templateFour;
+            cmd.Parameters["@templateFive"].Value = projectsClipBoardManager.templateFive;
 
             int rowsAffected = cmd.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
@@ -249,24 +249,55 @@ namespace ClipBoard_Manager
         }
 
 
-        /*public void UpdateProjectsComboBox(ComboBox comboBox)
+        public void UpdateProject(ProjectsClipBoardManager projectsClipBoardManager, string projectNameId)
         {
-            comboBox1.Items.Clear(); // Limpiar los elementos existentes en el ComboBox
 
-            Conectarbd.Open();
-
-            string query = "SELECT projectName FROM ProjectsClipBoardManager";
-            SqlCommand cmd = new SqlCommand(query, Conectarbd);
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                string projectName = reader.GetString(0);
-                comboBox.Items.Add(projectName);
-            }
+                if (ValidaProject(projectsClipBoardManager.projectName)) 
+                {
+                    Conectarbd.Open();
 
-            reader.Close();
-            Conectarbd.Close();
-        }*/
+                    string query = "UPDATE ProjectsClipBoardManager SET projectName = '" + projectsClipBoardManager.projectName + "', templateOne = '" + projectsClipBoardManager.templateOne + "', templateTwo = '" + projectsClipBoardManager.templateTwo + "', templateThree = '" + projectsClipBoardManager.templateThree + "', templateFour = '" + projectsClipBoardManager.templateFour + "', templateFive = '" + projectsClipBoardManager.templateFive + "' WHERE projectName = '" + projectNameId + "'";
+                    SqlCommand cmd = new SqlCommand(query, Conectarbd);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("El proyecto se ha actualizado exitosamente.");
+                    Conectarbd.Close();
+                }                              
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }            
+        }
+
+        private bool ValidaProject(string projectName) 
+        {
+            try
+            {
+                Conectarbd.Open();
+                string query = "SELECT * FROM ProjectsClipBoardManager WHERE projectName = '" + projectName + "'";
+                SqlCommand cmd = new SqlCommand(query, Conectarbd);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read()) 
+                {
+                    MessageBox.Show("Ya existe un projecto con este nombre");
+                    Conectarbd.Close();
+                    return false;
+                }
+                Conectarbd.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

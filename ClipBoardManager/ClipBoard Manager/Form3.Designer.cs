@@ -49,11 +49,13 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(304, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -67,6 +69,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(12, 95);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -115,6 +118,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(12, 261);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -143,6 +147,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(12, 432);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -171,6 +176,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(12, 602);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -199,6 +205,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(12, 787);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -231,9 +238,10 @@
             this.MaximumSize = new System.Drawing.Size(345, 1100);
             this.MinimumSize = new System.Drawing.Size(345, 300);
             this.Name = "Form3";
-            this.Opacity = 0.8D;
+            this.Opacity = 0.87D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My projects";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

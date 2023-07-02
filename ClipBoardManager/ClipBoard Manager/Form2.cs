@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClipBoard_Manager.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClipBoard_Manager.Models;
 
 namespace ClipBoard_Manager
 {
     public partial class Form2 : Form
     {
-        Class1 manager = new Class1();
+        Methods manager = new Methods();
         string cadena = "Data Source=DESKTOP-JKTQPIP\\SQLEXPRESS;Initial Catalog=ClipBoardManager; Integrated Security=True";
         SqlDataAdapter adapter;
         DataTable dt;
         string projectNameDelete = "";
+        string projectNameId = string.Empty;
         public Form2()
         {
             InitializeComponent();
@@ -31,13 +34,24 @@ namespace ClipBoard_Manager
             adapter = new SqlDataAdapter("select * from ProjectsClipBoardManager", cadena);
             dt = new DataTable();
             adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
+
+            // Asignar nombre a las columnas del grid
+            dt.Columns[0].ColumnName = "Project Name";
+            dt.Columns[1].ColumnName = "Template 1";
+            dt.Columns[2].ColumnName = "Template 2";
+            dt.Columns[3].ColumnName = "Template 3";
+            dt.Columns[4].ColumnName = "Template 4";
+            dt.Columns[5].ColumnName = "Template 5";
+
+            dataGridView1.DataSource = dt;           
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-   
+            ProjectsClipBoardManager projectsClipBoardManager = new ProjectsClipBoardManager();
+            Methods manager = new Methods();
+
             switch (cases)
             {
                 case 0:
@@ -45,32 +59,48 @@ namespace ClipBoard_Manager
                     break;
 
                 case 1:
-                    Class1 manager = new Class1();
-                    manager.InsertOne(textBox1.Text, textBox2.Text);
+                                        
+                    projectsClipBoardManager.projectName = textBox1.Text;
+                    projectsClipBoardManager.templateOne = textBox2.Text;
+                    manager.InsertOne(projectsClipBoardManager);
                     showData();
                     break; 
 
-                case 2:
-                    Class1 managerTwo = new Class1();
-                    managerTwo.InsertTwo(textBox1.Text, textBox2.Text, textBox3.Text);
+                case 2:                   
+                    projectsClipBoardManager.projectName = textBox1.Text;
+                    projectsClipBoardManager.templateOne = textBox2.Text;
+                    projectsClipBoardManager.templateTwo = textBox3.Text;
+                    manager.InsertTwo(projectsClipBoardManager);
                     showData();
                     break;
 
                 case 3:
-                    Class1 managerThree = new Class1();
-                    managerThree.InsertThree(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+                    projectsClipBoardManager.projectName = textBox1.Text;
+                    projectsClipBoardManager.templateOne = textBox2.Text;
+                    projectsClipBoardManager.templateTwo = textBox3.Text;
+                    projectsClipBoardManager.templateThree = textBox4.Text;
+                    manager.InsertThree(projectsClipBoardManager);
                     showData();
                     break;
 
                 case 4:
-                    Class1 managerFour = new Class1();
-                    managerFour.InsertFour(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
+                    projectsClipBoardManager.projectName= textBox1.Text;   
+                    projectsClipBoardManager.templateOne= textBox2.Text;
+                    projectsClipBoardManager.templateTwo = textBox3.Text;
+                    projectsClipBoardManager.templateThree = textBox4.Text;
+                    projectsClipBoardManager.templateFour = textBox5.Text;
+                    manager.InsertFour(projectsClipBoardManager);
                     showData();
                     break;
 
                 case 5:
-                    Class1 managerFive = new Class1();
-                    managerFive.InsertFive(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+                    projectsClipBoardManager.projectName = textBox1.Text;
+                    projectsClipBoardManager.projectName = textBox2.Text;
+                    projectsClipBoardManager.projectName = textBox3.Text;
+                    projectsClipBoardManager.projectName = textBox4.Text;
+                    projectsClipBoardManager.projectName = textBox5.Text;
+                    projectsClipBoardManager.projectName = textBox6.Text;
+                    manager.InsertFive(projectsClipBoardManager);
                     showData();
                     break;
 
@@ -212,6 +242,37 @@ namespace ClipBoard_Manager
                     manager.DeleteProject(projectNameDelete);
                     showData();
                 }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ProjectsClipBoardManager projectsClipBoardManager = new ProjectsClipBoardManager();
+
+            projectsClipBoardManager.projectName = textBox1.Text;
+            projectsClipBoardManager.templateOne = textBox2.Text;
+            projectsClipBoardManager.templateTwo = textBox3.Text;
+            projectsClipBoardManager.templateThree = textBox4.Text;
+            projectsClipBoardManager.templateFour = textBox5.Text;
+            projectsClipBoardManager.templateFive = textBox6.Text;
+            
+            manager.UpdateProject(projectsClipBoardManager, projectNameId);
+            showData();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexRow = e.RowIndex;
+            if (indexRow >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[indexRow];
+                projectNameId = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                textBox6.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
         }
     }
