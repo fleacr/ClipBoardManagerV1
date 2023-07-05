@@ -285,12 +285,12 @@ namespace ClipBoard_Manager
 
                 if (reader.Read()) 
                 {
-                    MessageBox.Show("Ya existe un projecto con este nombre");
                     Conectarbd.Close();
-                    return false;
+                    return true;
                 }
                 Conectarbd.Close();
-                return true;
+                MessageBox.Show("No existe ningún pryecto con ese nombre");
+                return false;
             }
             catch (Exception)
             {

@@ -131,6 +131,10 @@ namespace ClipBoard_Manager
                     textBox5.Visible = false;
                     label6.Visible = false;
                     textBox6.Visible = false;
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
                     cases = 1;
                     break;
                 case 2:
@@ -144,6 +148,9 @@ namespace ClipBoard_Manager
                     textBox5.Visible = false;
                     label6.Visible = false;
                     textBox6.Visible = false;
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
                     cases = 2;
                     break;
                 case 3:
@@ -157,6 +164,8 @@ namespace ClipBoard_Manager
                     textBox5.Visible = false;
                     label6.Visible = false;
                     textBox6.Visible = false;
+                    textBox5.Text = "";
+                    textBox6.Text = "";
                     cases = 3;
                     break;
                 case 4:
@@ -170,6 +179,7 @@ namespace ClipBoard_Manager
                     textBox5.Visible = true;
                     label6.Visible = false;
                     textBox6.Visible = false;
+                    textBox6.Text = "";
                     cases = 4;
                     break;
                 case 5:
