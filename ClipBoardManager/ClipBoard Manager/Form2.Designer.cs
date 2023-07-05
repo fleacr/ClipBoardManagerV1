@@ -59,7 +59,6 @@
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox1.Size = new System.Drawing.Size(389, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Type here the name of your project";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
@@ -177,9 +176,9 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 31);
+            this.button1.Size = new System.Drawing.Size(200, 21);
             this.button1.TabIndex = 12;
             this.button1.Text = "Create templates";
             this.button1.UseVisualStyleBackColor = true;
@@ -195,11 +194,11 @@
             "3",
             "4",
             "5"});
-            this.comboBox1.Location = new System.Drawing.Point(165, 22);
+            this.comboBox1.Location = new System.Drawing.Point(218, 22);
             this.comboBox1.MaxDropDownItems = 5;
             this.comboBox1.MaxLength = 1;
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 21);
+            this.comboBox1.Size = new System.Drawing.Size(183, 21);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.TabStop = false;
             this.comboBox1.Tag = "";
@@ -208,7 +207,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(220, 6);
+            this.label7.Location = new System.Drawing.Point(255, 6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 13);
             this.label7.TabIndex = 14;
@@ -216,6 +215,7 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(12, 104);
@@ -223,7 +223,7 @@
             this.button2.Size = new System.Drawing.Size(389, 27);
             this.button2.TabIndex = 15;
             this.button2.Text = "Save project";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
@@ -239,26 +239,28 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 164);
+            this.button3.Location = new System.Drawing.Point(12, 201);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(389, 27);
             this.button3.TabIndex = 17;
             this.button3.Text = "Delete all projects";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(12, 134);
+            this.button4.Location = new System.Drawing.Point(12, 166);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(389, 27);
             this.button4.TabIndex = 18;
             this.button4.Text = "Delete project";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox2
@@ -272,14 +274,15 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(12, 197);
+            this.button5.Location = new System.Drawing.Point(12, 134);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(389, 27);
             this.button5.TabIndex = 20;
             this.button5.Text = "Editar proyecto";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form2
