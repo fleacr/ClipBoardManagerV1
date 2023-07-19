@@ -24,3 +24,7 @@ F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\
 F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.csproj.CoreCompileInputs.cache
 F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.exe
 F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.pdb
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\bin\Debug\ClipBoard Manager.exe.manifest
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\bin\Debug\ClipBoard Manager.application
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.exe.manifest
+F:\Ideas\ClipBoardManager\ClipBoardManagerV1\ClipBoardManager\ClipBoard Manager\obj\Debug\ClipBoard Manager.application

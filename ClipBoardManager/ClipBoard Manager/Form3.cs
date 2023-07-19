@@ -14,6 +14,9 @@ namespace ClipBoard_Manager
 {
     public partial class Form3 : Form
     {
+        string cadena = "Data Source=DESKTOP-JKTQPIP\\SQLEXPRESS;Initial Catalog=ClipBoardManager; Integrated Security=True";
+        SqlDataAdapter adapter;
+        DataTable dt;
         Methods manager = new Methods();
         public SqlConnection Conectarbd = new SqlConnection();
         public Form3()
@@ -24,6 +27,24 @@ namespace ClipBoard_Manager
         public void Form3_Load(object sender, EventArgs e)
         {
             UpdateProjectsComboBox(comboBox1);
+            showData();
+        }
+
+        public void showData()
+        {
+            adapter = new SqlDataAdapter("select * from ProjectsClipBoardManager", cadena);
+            dt = new DataTable();
+            adapter.Fill(dt);
+
+            // Asignar nombre a las columnas del grid
+            dt.Columns[0].ColumnName = "Project Name";
+            dt.Columns[1].ColumnName = "Template 1";
+            dt.Columns[2].ColumnName = "Template 2";
+            dt.Columns[3].ColumnName = "Template 3";
+            dt.Columns[4].ColumnName = "Template 4";
+            dt.Columns[5].ColumnName = "Template 5";
+
+            dataGridView1.DataSource = dt;
         }
 
         public void UpdateProjectsComboBox(System.Windows.Forms.ComboBox comboBox1)
@@ -119,6 +140,26 @@ namespace ClipBoard_Manager
 
             reader.Close();
             Conectarbd.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexRow = e.RowIndex;
+            if (indexRow >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[indexRow];
+                textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
         }
     }
 }

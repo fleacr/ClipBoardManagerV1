@@ -289,7 +289,7 @@ namespace ClipBoard_Manager
                     return true;
                 }
                 Conectarbd.Close();
-                MessageBox.Show("No existe ningún pryecto con ese nombre");
+                MessageBox.Show("No existe ningún proyecto con ese nombre");
                 return false;
             }
             catch (Exception)

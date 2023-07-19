@@ -19,12 +19,14 @@ namespace ClipBoard_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var form2 = new Form2();
             form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var form3 = new Form3();
             form3.Show();
         }

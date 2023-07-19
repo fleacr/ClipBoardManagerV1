@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClipBoard_Manager.Models;
 
 namespace ClipBoard_Manager
 {
@@ -284,6 +283,17 @@ namespace ClipBoard_Manager
                 textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 textBox6.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
